@@ -1,7 +1,7 @@
 # Variables
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-NAME = so_long
+NAME = game
 
 OBJDIR = obj
 MLX_DIR_LINUX = libs/mlx
