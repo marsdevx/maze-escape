@@ -1,1 +1,9 @@
 improvments.md
+libs/libft/*.o
+libs/libft/libft.a
+libs/libftprintf/*.o
+libs/libftprintf/libftprintf.a
+libs/mlx-linux/*.o
+libs/mlx-linux/libmlx_Linux.a
+libs/mlx-macos/*.o
+libs/mlx-macos/libmlx.a
