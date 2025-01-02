@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = game
 
 OBJDIR = obj
-MLX_DIR_LINUX = libs/mlx
+MLX_DIR_LINUX = libs/mlx-linux
 MLX_DIR_MACOS = libs/mlx-macos
 LIBFT_DIR = libs/libft
 FTPRINTF_DIR = libs/libftprintf
