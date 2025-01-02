@@ -7,3 +7,5 @@ libs/mlx-linux/*.o
 libs/mlx-linux/libmlx_Linux.a
 libs/mlx-macos/*.o
 libs/mlx-macos/libmlx.a
+game
+obj
