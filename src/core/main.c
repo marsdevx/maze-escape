@@ -6,7 +6,7 @@
 /*   By: marksylaiev <marksylaiev@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 03:36:46 by marksylaiev       #+#    #+#             */
-/*   Updated: 2024/12/17 06:05:39 by marksylaiev      ###   ########.fr       */
+/*   Updated: 2025/01/03 03:38:15 by marksylaiev      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,6 @@ int	main(int ac, char **av)
 {
 	t_vars	vars;
 
-	if (!has_valid_extension(av[1]))
-	{
-		ft_printf("Error: Invalid file extension.\n");
-		return (0);
-	}
 	if (ac != 2)
 	{
 		ft_printf("Error - Usage: ./so_long <map_file>\n");

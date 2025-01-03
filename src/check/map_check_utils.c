@@ -6,7 +6,7 @@
 /*   By: marksylaiev <marksylaiev@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 21:30:23 by marksylaiev       #+#    #+#             */
-/*   Updated: 2024/12/17 19:09:55 by marksylaiev      ###   ########.fr       */
+/*   Updated: 2025/01/03 03:37:22 by marksylaiev      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,23 +60,4 @@ void	count_map_chars(t_vars *vars)
 	vars->map_info.all_players = counts.players;
 	vars->map_info.all_exits = counts.exits;
 	vars->map_info.all_collectible = counts.collectibles;
-}
-
-int	has_valid_extension(const char *path)
-{
-	const char	*extension = ".ber";
-	size_t		path_len;
-	size_t		ext_len;
-	char		*last_ber;
-
-	path_len = ft_strlen(path);
-	ext_len = ft_strlen(extension);
-	if (path_len < ext_len)
-		return (0);
-	last_ber = ft_strnstr(path, extension, path_len);
-	if (!last_ber)
-		return (0);
-	if (ft_strlen(last_ber) == ext_len)
-		return (1);
-	return (0);
 }
