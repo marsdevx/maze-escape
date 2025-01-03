@@ -16,11 +16,13 @@ SRC = $(SRC_CHECK) $(SRC_CORE) $(SRC_MAP)
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
 # Rule for Linux build
+linux: CFLAGS += -DLINUX
 linux: MLX_DIR=$(MLX_DIR_LINUX)
 linux: MLX_LIB=-lmlx_Linux -lm -lX11 -lXext
 linux: $(LIBFT_DIR)/libft.a $(FTPRINTF_DIR)/libftprintf.a $(MLX_DIR)/libmlx.a $(NAME)
 
 # Rule for macOS build
+macos: CFLAGS += -DMACOS
 macos: MLX_DIR=$(MLX_DIR_MACOS)
 macos: MLX_LIB=-lmlx -framework OpenGL -framework AppKit
 macos: $(LIBFT_DIR)/libft.a $(FTPRINTF_DIR)/libftprintf.a $(MLX_DIR)/libmlx.a $(NAME)
