@@ -45,25 +45,13 @@ $(FTPRINTF_DIR)/libftprintf.a:
 $(MLX_DIR)/libmlx.a:
 	$(MAKE) -C $(MLX_DIR)
 
-# Debug build target
-debug: CFLAGS += -g
-debug: re
-
 # Rules of actions
-.PHONY: all clean fclean re macos
-
 clean:
-	rm -rf $(OBJDIR)
-	$(MAKE) -C $(LIBFT_DIR) clean
-	$(MAKE) -C $(FTPRINTF_DIR) clean
-	-$(MAKE) -C $(MLX_DIR_LINUX) clean
-	-$(MAKE) -C $(MLX_DIR_MACOS) clean
-
-fclean: clean
 	rm -rf $(NAME)
+	rm -rf $(OBJDIR)
 	$(MAKE) -C $(LIBFT_DIR) fclean
 	$(MAKE) -C $(FTPRINTF_DIR) fclean
 	-$(MAKE) -C $(MLX_DIR_LINUX) clean
 	-$(MAKE) -C $(MLX_DIR_MACOS) clean
 
-re: fclean all
+.PHONY: all clean fclean macos
