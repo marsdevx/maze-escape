@@ -54,4 +54,4 @@ clean:
 	-$(MAKE) -C $(MLX_DIR_LINUX) clean
 	-$(MAKE) -C $(MLX_DIR_MACOS) clean
 
-.PHONY: all clean fclean macos
+.PHONY: all clean macos
