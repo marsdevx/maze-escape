@@ -42,7 +42,7 @@
 
 # define MAX_COLLECTIBLES 100
 
-typedef struct useless_1
+typedef struct
 {
 	int				width;
 	int				height;
@@ -51,7 +51,7 @@ typedef struct useless_1
 	int				all_players;
 }					t_map_info;
 
-typedef struct useless_2
+typedef struct
 {
 	int				tile_size;
 	int				current_x;
@@ -65,7 +65,7 @@ typedef struct useless_2
 	int				collectible_y[MAX_COLLECTIBLES];
 }					t_game_state;
 
-typedef struct t_graphics
+typedef struct
 {
 	void			*mlx;
 	void			*win;
@@ -76,7 +76,7 @@ typedef struct t_graphics
 	void			*wall_img;
 }					t_graphics;
 
-typedef struct useless_4
+typedef struct
 {
 	t_graphics		graphics;
 	t_game_state	state;
@@ -84,7 +84,7 @@ typedef struct useless_4
 	char			*path;
 }					t_vars;
 
-typedef struct useless_5
+typedef struct
 {
 	int				players;
 	int				exits;
