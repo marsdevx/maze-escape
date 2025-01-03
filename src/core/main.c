@@ -6,27 +6,33 @@
 /*   By: marksylaiev <marksylaiev@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 03:36:46 by marksylaiev       #+#    #+#             */
-/*   Updated: 2025/01/03 03:38:15 by marksylaiev      ###   ########.fr       */
+/*   Updated: 2025/01/03 06:43:38 by marksylaiev      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-void	set_img(t_vars *vars)
+void	set_img(t_vars *vars, const char *textures_dir)
 {
-	int	img_width;
-	int	img_height;
+	int		img_width;
+	int		img_height;
+	char	path[256];
 
-	vars->graphics.bg_img = mlx_xpm_file_to_image(vars->graphics.mlx,
-			"textures/bg.xpm", &img_width, &img_height);
-	vars->graphics.player_img = mlx_xpm_file_to_image(vars->graphics.mlx,
-			"textures/player.xpm", &img_width, &img_height);
-	vars->graphics.exit_img = mlx_xpm_file_to_image(vars->graphics.mlx,
-			"textures/exit.xpm", &img_width, &img_height);
-	vars->graphics.item_img = mlx_xpm_file_to_image(vars->graphics.mlx,
-			"textures/item.xpm", &img_width, &img_height);
-	vars->graphics.wall_img = mlx_xpm_file_to_image(vars->graphics.mlx,
-			"textures/wall.xpm", &img_width, &img_height);
+	snprintf(path, sizeof(path), "%s/bg.xpm", textures_dir);
+	vars->graphics.bg_img = mlx_xpm_file_to_image(vars->graphics.mlx, path,
+			&img_width, &img_height);
+	snprintf(path, sizeof(path), "%s/player.xpm", textures_dir);
+	vars->graphics.player_img = mlx_xpm_file_to_image(vars->graphics.mlx, path,
+			&img_width, &img_height);
+	snprintf(path, sizeof(path), "%s/exit.xpm", textures_dir);
+	vars->graphics.exit_img = mlx_xpm_file_to_image(vars->graphics.mlx, path,
+			&img_width, &img_height);
+	snprintf(path, sizeof(path), "%s/item.xpm", textures_dir);
+	vars->graphics.item_img = mlx_xpm_file_to_image(vars->graphics.mlx, path,
+			&img_width, &img_height);
+	snprintf(path, sizeof(path), "%s/wall.xpm", textures_dir);
+	vars->graphics.wall_img = mlx_xpm_file_to_image(vars->graphics.mlx, path,
+			&img_width, &img_height);
 }
 
 static int	check_args_and_init_vars(char **av, t_vars *vars)
@@ -62,9 +68,9 @@ static void	init_mlx_and_window(t_vars *vars)
 	}
 }
 
-static void	setup_and_run_game(t_vars *vars)
+static void	setup_and_run_game(t_vars *vars, const char *textures_dir)
 {
-	set_img(vars);
+	set_img(vars, textures_dir);
 	read_and_display_map(vars);
 	mlx_hook(vars->graphics.win, 2, 1L << 0, move_player, vars);
 	mlx_hook(vars->graphics.win, 17, 0, close_window, vars);
@@ -75,9 +81,9 @@ int	main(int ac, char **av)
 {
 	t_vars	vars;
 
-	if (ac != 2)
+	if (ac != 3)
 	{
-		ft_printf("Error - Usage: ./so_long <map_file>\n");
+		ft_printf("Error - Usage: ./game levels/lvl1 textures\n");
 		return (0);
 	}
 	check_args_and_init_vars(av, &vars);
@@ -86,6 +92,6 @@ int	main(int ac, char **av)
 		return (0);
 	}
 	init_mlx_and_window(&vars);
-	setup_and_run_game(&vars);
+	setup_and_run_game(&vars, av[2]);
 	return (0);
 }
