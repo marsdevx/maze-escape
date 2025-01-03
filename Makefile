@@ -16,19 +16,19 @@ SRC = $(SRC_CHECK) $(SRC_CORE) $(SRC_MAP)
 
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
-# Default MLX settings for Linux
-MLX_DIR = $(MLX_DIR_LINUX)
-MLX_LIB = -lmlx_Linux -lm -lX11 -lXext
+# Rule for Linux build
+linux: MLX_DIR=$(MLX_DIR_LINUX)
+linux: MLX_LIB=-lmlx_Linux -lm -lX11 -lXext
+linux: $(LIBFT_DIR)/libft.a $(FTPRINTF_DIR)/libftprintf.a $(MLX_DIR)/libmlx.a $(NAME)
 
-# Rules for building the program
-all: $(LIBFT_DIR)/libft.a $(FTPRINTF_DIR)/libftprintf.a $(MLX_DIR)/libmlx.a $(NAME)
+# Rule for macOS build
+macos: MLX_DIR=$(MLX_DIR_MACOS)
+macos: MLX_LIB=-lmlx -framework OpenGL -framework AppKit
+macos: $(LIBFT_DIR)/libft.a $(FTPRINTF_DIR)/libftprintf.a $(MLX_DIR)/libmlx.a $(NAME)
 
+# Build the program
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -L$(LIBFT_DIR) -L$(FTPRINTF_DIR) -L$(MLX_DIR) -lftprintf -lft $(MLX_LIB) -o $(NAME)
-
-# MacOS-specific build rule
-macos:
-	@$(MAKE) MLX_DIR=$(MLX_DIR_MACOS) MLX_LIB="-lmlx -framework OpenGL -framework AppKit" all
 
 # Build the object files with dynamic directory creation
 $(OBJDIR)/%.o: %.c
@@ -45,7 +45,7 @@ $(FTPRINTF_DIR)/libftprintf.a:
 $(MLX_DIR)/libmlx.a:
 	$(MAKE) -C $(MLX_DIR)
 
-# Rules of actions
+# Clean rule
 clean:
 	rm -rf $(NAME)
 	rm -rf $(OBJDIR)
@@ -54,4 +54,4 @@ clean:
 	-$(MAKE) -C $(MLX_DIR_LINUX) clean
 	-$(MAKE) -C $(MLX_DIR_MACOS) clean
 
-.PHONY: all clean macos
+.PHONY: linux macos clean
