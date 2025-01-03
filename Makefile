@@ -13,7 +13,6 @@ SRC_CHECK = src/check/is_enclosed_in_walls.c src/check/map_check.c src/check/map
 SRC_CORE = src/core/main.c src/core/move_player.c src/core/next_px.c
 SRC_MAP = src/map/get_map_info.c src/map/read_and_display_map.c
 SRC = $(SRC_CHECK) $(SRC_CORE) $(SRC_MAP)
-
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
 # Rule for Linux build
