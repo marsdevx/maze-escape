@@ -22,7 +22,7 @@
 #                                                             ⣿⣿⣿⣿⣿⣧⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⢱⠀⠚⠉⣩⡶⠀⢀⠀⠀⢀⠀⠠⣀⣀⠀⠀⠀⢐⣄⠀⠀⠀⠈⢂⠀⢨⣿⣿⣿⣿⣿⣿⣿   #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS =
 NAME = game
 
 OBJDIR = obj
