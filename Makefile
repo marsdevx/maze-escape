@@ -68,15 +68,15 @@ $(FTPRINTF_DIR)/libftprintf.a:
 	$(MAKE) -C $(FTPRINTF_DIR)
 
 $(MLX_DIR)/libmlx.a:
-	$(MAKE) -C $(MLX_DIR)
+	$(MAKE) >/dev/null 2>&1 -C $(MLX_DIR)
 
 # Clean rule
 clean:
 	rm -rf $(NAME)
 	rm -rf $(OBJDIR)
-	$(MAKE) -C $(LIBFT_DIR) fclean --silent >/dev/null 2>&1 || true
-	$(MAKE) -C $(FTPRINTF_DIR) fclean --silent >/dev/null 2>&1 || true
-	-$(MAKE) -C $(MLX_DIR_LINUX) clean --silent >/dev/null 2>&1 || true
-	-$(MAKE) -C $(MLX_DIR_MACOS) clean --silent >/dev/null 2>&1 || true
+	$(MAKE) -C $(LIBFT_DIR) fclean >/dev/null 2>&1 || true
+	$(MAKE) -C $(FTPRINTF_DIR) fclean >/dev/null 2>&1 || true
+	-$(MAKE) -C $(MLX_DIR_LINUX) clean >/dev/null 2>&1 || true
+	-$(MAKE) -C $(MLX_DIR_MACOS) clean >/dev/null 2>&1 || true
 
 .PHONY: linux macos clean
