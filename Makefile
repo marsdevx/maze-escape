@@ -37,6 +37,8 @@ SRC_MAP = src/map/get_map_info.c src/map/read_and_display_map.c
 SRC = $(SRC_CHECK) $(SRC_CORE) $(SRC_MAP)
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
+.SILENT:
+
 # Rule for Linux build
 linux: CFLAGS += -DLINUX
 linux: MLX_DIR=$(MLX_DIR_LINUX)
@@ -72,9 +74,9 @@ $(MLX_DIR)/libmlx.a:
 clean:
 	rm -rf $(NAME)
 	rm -rf $(OBJDIR)
-	$(MAKE) -C $(LIBFT_DIR) fclean
-	$(MAKE) -C $(FTPRINTF_DIR) fclean
-	-$(MAKE) -C $(MLX_DIR_LINUX) clean
-	-$(MAKE) -C $(MLX_DIR_MACOS) clean
+	$(MAKE) -C $(LIBFT_DIR) fclean --silent >/dev/null 2>&1 || true
+	$(MAKE) -C $(FTPRINTF_DIR) fclean --silent >/dev/null 2>&1 || true
+	-$(MAKE) -C $(MLX_DIR_LINUX) clean --silent >/dev/null 2>&1 || true
+	-$(MAKE) -C $(MLX_DIR_MACOS) clean --silent >/dev/null 2>&1 || true
 
 .PHONY: linux macos clean
