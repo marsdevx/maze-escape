@@ -43,6 +43,16 @@
 # define KEY_ESC 65307
 #endif
 
+#ifndef MACOS
+#ifndef LINUX
+# define KEY_W 0
+# define KEY_A 0
+# define KEY_S 0
+# define KEY_D 0
+# define KEY_ESC 0
+#endif
+#endif
+
 # define MAX_COLLECTIBLES 100
 
 typedef struct
