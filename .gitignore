@@ -10,3 +10,4 @@ libs/mlx-macos/*.o
 libs/mlx-macos/libmlx.a
 game
 obj
+.DS_Store
