@@ -67,8 +67,10 @@ int	handle_tile_action(char tile, int next_x, int next_y, t_vars *vars)
 		check_collectible(next_x, next_y, tile, vars);
 	else if (tile == 'E')
 	{
-		if (vars->map_info.all_collectible == vars->state.collectible_count)
+		if (vars->map_info.all_collectible == vars->state.collectible_count) {
+			ft_printf("Move number: %d\n", vars->state.move_count);
 			close_window(vars);
+		}
 		else
 			return (0);
 	}
@@ -114,7 +116,6 @@ int	move_player(int key, t_vars *vars)
 	vars->state.current_x = next_x;
 	vars->state.current_y = next_y;
 	vars->state.move_count++;
-	ft_printf("Move number: %d\n", vars->state.move_count);
 	refresh_display(vars);
 	return (0);
 }
