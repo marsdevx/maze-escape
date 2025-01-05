@@ -23,7 +23,7 @@
 
 CC = cc
 CFLAGS =
-NAME = game
+NAME = maze_escape
 
 OBJDIR = obj
 MLX_DIR_LINUX = libs/mlx-linux

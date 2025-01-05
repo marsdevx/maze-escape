@@ -71,7 +71,7 @@ static void	init_mlx_and_window(t_vars *vars)
 	win_width = vars->map_info.width * vars->state.tile_size;
 	win_height = vars->map_info.height * vars->state.tile_size;
 	vars->graphics.win = mlx_new_window(vars->graphics.mlx, win_width,
-			win_height, "Mini Game");
+			win_height, "Maze Escape");
 	if (!vars->graphics.win)
 	{
 		perror("Error creating window\n");
