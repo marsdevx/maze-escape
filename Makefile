@@ -44,39 +44,48 @@ linux: CFLAGS += -DLINUX
 linux: MLX_DIR=$(MLX_DIR_LINUX)
 linux: MLX_LIB=-lmlx_Linux -lm -lX11 -lXext
 linux: $(LIBFT_DIR)/libft.a $(FTPRINTF_DIR)/libftprintf.a $(MLX_DIR)/libmlx.a $(NAME)
+	@echo "Linux build complete."
 
 # Rule for macOS build
 macos: CFLAGS += -DMACOS
 macos: MLX_DIR=$(MLX_DIR_MACOS)
 macos: MLX_LIB=-lmlx -framework OpenGL -framework AppKit
 macos: $(LIBFT_DIR)/libft.a $(FTPRINTF_DIR)/libftprintf.a $(MLX_DIR)/libmlx.a $(NAME)
+	@echo "macOS build complete."
 
 # Build the program
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -L$(LIBFT_DIR) -L$(FTPRINTF_DIR) -L$(MLX_DIR) -lftprintf -lft $(MLX_LIB) -o $(NAME)
+	@echo "$(NAME) has been successfully built."
 
 # Build the object files with dynamic directory creation
 $(OBJDIR)/%.o: %.c
+	@echo "Compiling $<"
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -I$(MLX_DIR) -I$(LIBFT_DIR) -I$(FTPRINTF_DIR) -Iinclude -c $< -o $@
 
 # Rules to build the libraries
 $(LIBFT_DIR)/libft.a:
+	@echo "Building libft"
 	$(MAKE) -C $(LIBFT_DIR)
 
 $(FTPRINTF_DIR)/libftprintf.a:
+	@echo "Building libftprintf"
 	$(MAKE) -C $(FTPRINTF_DIR)
 
 $(MLX_DIR)/libmlx.a:
+	@echo "Building mlx library"
 	$(MAKE) >/dev/null 2>&1 -C $(MLX_DIR)
 
 # Clean rule
 clean:
+	@echo "Cleaning up"
 	rm -rf $(NAME)
 	rm -rf $(OBJDIR)
 	$(MAKE) -C $(LIBFT_DIR) fclean >/dev/null 2>&1 || true
 	$(MAKE) -C $(FTPRINTF_DIR) fclean >/dev/null 2>&1 || true
 	-$(MAKE) -C $(MLX_DIR_LINUX) clean >/dev/null 2>&1 || true
 	-$(MAKE) -C $(MLX_DIR_MACOS) clean >/dev/null 2>&1 || true
+	@echo "Clean complete."
 
 .PHONY: linux macos clean
