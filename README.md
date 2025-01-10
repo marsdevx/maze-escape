@@ -13,7 +13,7 @@
 
 ---
 
-# Maze Escape
+# 🧩 Maze Escape
 
 This project is a simple **2D puzzle game** built for educational purposes using the **C language** and the **MiniLibX Graphics Library**. Designed to run on **Linux** and **macOS**, this open-source project showcases the basics of **game development** with **C**.
 
@@ -34,12 +34,12 @@ Explore how C can bring games to life with this opensource puzzle game!
 
 ---
 
-## Installation
+## 🛠️ Installation
 
 To install this project, Launch the Terminal app on your system, and run the commands below. <br>
   - If a pop-up appears prompting you to download the Xcode Command Line Tools after the first command, click “Download” and then run the first command again.
 
-### macOS
+###  macOS
 
 1. **Clone repo**
 ```bash
@@ -51,7 +51,7 @@ git clone https://github.com/marsdevx/maze-escape.git ~/Downloads/Maze-Escape
 cd ~/Downloads/Maze-Escape && make macos
 ```
 
-### Linux
+### 🐧 Linux
 
 1. **Clone repo**
 ```bash
@@ -65,7 +65,7 @@ cd ~/Downloads/Maze-Escape && make linux
 
 ---
 
-## Usage
+## 🚀 Usage
 
 1. **Navigate to the Game Directory**
 ```bash
@@ -96,7 +96,7 @@ You can modify the level and texture by changing the corresponding arguments in 
 
 ---
 
-## Advanced Options
+## ⚙️ Advanced Options
 
 ### Add Your Own Map
 
