@@ -26,7 +26,7 @@ Explore how C can bring games to life with this opensource puzzle game!
 
 ---
 
-## Preview
+## 🖼️ Preview
 
 <div align="center">
   <img src="imgs/preview.png" alt="Preview">
