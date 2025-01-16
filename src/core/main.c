@@ -88,15 +88,72 @@ static void	setup_and_run_game(t_vars *vars, const char *textures_dir)
 	mlx_loop(vars->graphics.mlx);
 }
 
+void print_help() {
+  ft_printf(
+    "Maze Escape - A fun, customizable maze game with support for custom levels and textures.\n\n"
+    "Usage:\n"
+    "  1. Navigate to the Game Directory:\n"
+    "     cd ~/Downloads/Maze-Escape\n\n"
+    "  2. Run the Game:\n"
+    "     ./maze_escape <level> <texture>\n"
+    "     Example:\n"
+    "       ./maze_escape levels/lvl1 textures/pacman\n\n"
+    "  3. Customize Your Game:\n"
+    "     Modify the level and texture by changing the arguments:\n"
+    "       Levels:\n"
+    "         - levels/lvl1\n"
+    "         - levels/lvl2\n"
+    "         - levels/lvl3\n"
+    "         - levels/lvl4\n"
+    "       Textures:\n"
+    "         - textures/pacman\n"
+    "         - textures/adventurer\n"
+    "         - textures/chicken\n"
+    "         - textures/pokemon\n"
+    "         - textures/space-ship\n"
+    "         - textures/time-adventure\n\n"
+    "Advanced Options:\n"
+    "  Add Your Own Map:\n"
+    "    - Maps must be `.ber` files.\n"
+    "    - Maps can only contain the following characters:\n"
+    "        | CHAR | OBJECT        |\n"
+    "        |------|---------------|\n"
+    "        | 1    | Wall          |\n"
+    "        | C    | Collectible   |\n"
+    "        | E    | Exit          |\n"
+    "        | P    | Player        |\n"
+    "        | 0    | Background    |\n"
+    "    - Example of a valid map:\n"
+    "        11111111111\n"
+    "        10000P1C001\n"
+    "        11111011101\n"
+    "        10001000001\n"
+    "        101011111E1\n"
+    "        11111111111\n\n"
+    "  Add Your Own Textures:\n"
+    "    - The `textures` folder must contain exactly 5 files in the `.xpm` format.\n"
+    "    - Files must be named:\n"
+    "        - bg.xpm      (background)\n"
+    "        - exit.xpm    (exit point)\n"
+    "        - item.xpm    (collectible items)\n"
+    "        - player.xpm  (player character)\n"
+    "        - wall.xpm    (walls)\n\n"
+    "Notes:\n"
+    "  - Ensure you have appropriate permissions to execute the game binary.\n"
+    "  - Custom maps and textures must adhere to the specified rules for the game to function correctly.\n\n"
+    "For additional help, refer to the project documentation.\n"
+  );
+}
+
 int	main(int ac, char **av)
 {
+  if (ac != 3 || ft_strncmp(av[1], "--help", 7) == 0 || ft_strncmp(av[1], "-h", 3) == 0) {
+    print_help();
+    return (0);
+  }
+
 	t_vars	vars;
 
-	if (ac != 3)
-	{
-		ft_printf("Error - Usage: ./game levels/lvl1 textures\n");
-		return (0);
-	}
 	check_args_and_init_vars(av, &vars);
 	if (map_check(&vars) == 1)
 	{
