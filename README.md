@@ -142,6 +142,7 @@ You can add custom textures to the game, as long as they follow these rules:
 ## 📋 License
 
 All the code contained in this repo is licensed under the [MIT License](LICENSE)
+
 ```
 MIT License
 
