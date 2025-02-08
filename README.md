@@ -2,13 +2,14 @@
   <img src="imgs/logo.png" width="320px" alt="Maze Escape">
 </div>
 <br>
+
 <div align="center">
-  <img src="https://img.shields.io/github/last-commit/marsdevx/maze-escape?logo=github&logoColor=f5f5f5&label=Last%20Commit&color=8A2BE2&labelColor=2C2C2C" alt="Last Commit">
-  <img src="https://img.shields.io/badge/Platforms-macOS%20|%20Linux-D8B22E?logo=linux&logoColor=f5f5f5&labelColor=2C2C2C" alt="Platforms"><br>
-  <img src="https://img.shields.io/badge/Languages-C%20language-2181C1?logo=coder&logoColor=f5f5f5&labelColor=2C2C2C" alt="Languages">
-  <img src="https://img.shields.io/badge/Genre-Puzzle-97C625?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cGF0aCBkPSJNMTI5IDExMWMtNTUgNC05MyA2Ni05MyA3OEwwIDM5OGMtMiA3MCAzNiA5MiA2OSA5MWgxYzc5IDAgODctNTcgMTMwLTEyOGgyMDFjNDMgNzEgNTAgMTI4IDEyOSAxMjhoMWMzMyAxIDcxLTIxIDY5LTkxbC0zNi0yMDljMC0xMi00MC03OC05OC03OGgtMTBjLTYzIDAtOTIgMzUtOTIgNDJIMjM2YzAtNy0yOS00Mi05Mi00MmgtMTV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+&logoColor=f5f5f5&labelColor=2C2C2C" alt="Genre">
-  <img src="https://img.shields.io/badge/Assets-%206%20-748ADB?logo=figshare&logoColor=f5f5f5&labelColor=2C2C2C" alt="Assets">
-  <img src="https://img.shields.io/badge/Levels-%204%20-B12B2A?logo=levelsdotfyi&logoColor=f5f5f5&labelColor=2C2C2C" alt="Levels">
+  <img src="https://custom-icon-badges.demolab.com/github/last-commit/marsdevx/maze-escape?logoColor=white&labelColor=2C2C2C&label=Last%20Commit&color=8A2BE2&logo=mark-github" alt="Last Commit">
+  <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Platforms&message=macOS%20|%20Linux&color=D32F2F&logo=device-desktop" alt="Platforms">
+  <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Languages&message=C%20language&color=748ADB&logo=file-code" alt="Languages">
+  <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Genre&message=Puzzle&color=F47F42&logo=goal" alt="Genre">
+  <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Assets&message=%206%20&color=15CDD3&logo=file-media" alt="Assets">
+  <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Levels&message=%204%20&color=00C853&logo=filter" alt="Levels">
 </div>
 
 ---
