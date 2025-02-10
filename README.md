@@ -5,28 +5,15 @@
 <br>
 
 <div align="center">
-  <a href="https://github.com/marsdevx/maze-escape/commits/main" title="Last Commit">
-    <img src="https://custom-icon-badges.demolab.com/github/last-commit/marsdevx/maze-escape?logoColor=white&labelColor=2C2C2C&label=Last%20Commit&color=8A2BE2&logo=mark-github" alt="Last Commit">
-  </a>
-  <a href="https://github.com/marsdevx/maze-escape" title="Platforms">
-    <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Platforms&message=macOS%20|%20Linux&color=D32F2F&logo=device-desktop" alt="Platforms">
-  </a>
-  <br>
-  <a href="https://github.com/marsdevx/maze-escape" title="Languages">
-    <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Languages&message=C%20language&color=748ADB&logo=file-code" alt="Languages">
-  </a>
-  <a href="https://github.com/marsdevx/maze-escape" title="Genre">
-    <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Genre&message=Puzzle&color=F47F42&logo=goal" alt="Genre">
-  </a>
-  <a href="https://github.com/marsdevx/maze-escape/tree/main/textures" title="Assets">
-    <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Assets&message=%206%20&color=15CDD3&logo=file-media" alt="Assets">
-  </a>
-  <a href="https://github.com/marsdevx/maze-escape/tree/main/levels" title="Levels">
-    <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Levels&message=%204%20&color=C2185B&logo=filter" alt="Levels">
-  </a>
-  <a href="https://github.com/marsdevx/maze-escape/blob/main/LICENSE" title="License">
-    <img src="https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=License&message=MIT&color=00C853&logo=law" alt="License">
-  </a>
+
+[![Last Commit](https://custom-icon-badges.demolab.com/github/last-commit/marsdevx/maze-escape?logoColor=white&labelColor=2C2C2C&label=Last%20Commit&color=8A2BE2&logo=mark-github)](https://github.com/marsdevx/maze-escape/commits/main "Last Commit")
+[![Platforms](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Platforms&message=macOS%20|%20Linux&color=D32F2F&logo=device-desktop)](https://github.com/marsdevx/maze-escape "Platforms")
+[![Languages](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Languages&message=C%20language&color=748ADB&logo=file-code)](https://github.com/marsdevx/maze-escape "Languages")
+[![Genre](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Genre&message=Puzzle&color=F47F42&logo=goal)](https://github.com/marsdevx/maze-escape "Genre")
+[![Assets](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Assets&message=%206%20&color=15CDD3&logo=file-media)](https://github.com/marsdevx/maze-escape/tree/main/textures "Assets")
+[![Levels](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Levels&message=%204%20&color=C2185B&logo=filter)](https://github.com/marsdevx/maze-escape/tree/main/levels "Levels")
+[![License](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=License&message=MIT&color=00C853&logo=law)](https://github.com/marsdevx/maze-escape/blob/main/LICENSE "License")
+
 </div>
 
 ---
