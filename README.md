@@ -8,6 +8,7 @@
 
 [![Last Commit](https://custom-icon-badges.demolab.com/github/last-commit/marsdevx/maze-escape?logoColor=white&labelColor=2C2C2C&label=Last%20Commit&color=8A2BE2&logo=mark-github)](https://github.com/marsdevx/maze-escape/commits/main "Last Commit")
 [![Platforms](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Platforms&message=macOS%20|%20Linux&color=D32F2F&logo=device-desktop)](https://github.com/marsdevx/maze-escape "Platforms")
+<br>
 [![Languages](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Languages&message=C%20language&color=748ADB&logo=file-code)](https://github.com/marsdevx/maze-escape "Languages")
 [![Genre](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Genre&message=Puzzle&color=F47F42&logo=goal)](https://github.com/marsdevx/maze-escape "Genre")
 [![Assets](https://custom-icon-badges.demolab.com/static/v1?logoColor=white&labelColor=2C2C2C&label=Assets&message=%206%20&color=15CDD3&logo=file-media)](https://github.com/marsdevx/maze-escape/tree/main/textures "Assets")
